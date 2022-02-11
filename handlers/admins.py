@@ -18,7 +18,7 @@ ACTV_CALLS = []
 @authorized_users_only
 async def pause(_, message: Message):
     await callsmusic.pytgcalls.pause_stream(message.chat.id)
-    await message.reply_text("» ᴛʀᴀᴄᴋ ᴘᴀᴜsᴇᴅ ʙᴀʙʏ😫")
+    await message.reply_text("🥂 ᴛʀᴀᴄᴋ ᴘᴀᴜsᴇᴅ 👀")
 
 
 @Client.on_message(command(["resume"]) & other_filters)
@@ -26,7 +26,7 @@ async def pause(_, message: Message):
 @authorized_users_only
 async def resume(_, message: Message):
     await callsmusic.pytgcalls.resume_stream(message.chat.id)
-    await message.reply_text("» ᴛʀᴀᴄᴋ ʀᴇsᴜᴍᴇᴅ ʙᴀʙʏ🤗")
+    await message.reply_text("🥂 ᴛʀᴀᴄᴋ ʀᴇsᴜᴍᴇᴅ 🤗")
 
 
 @Client.on_message(command(["end"]) & other_filters)
@@ -39,7 +39,7 @@ async def stop(_, message: Message):
         pass
 
     await callsmusic.pytgcalls.leave_group_call(message.chat.id)
-    await message.reply_text("» sᴛʀᴇᴀᴍ ᴇɴᴅᴇᴅ ʙᴀʙʏ🥺")
+    await message.reply_text("» 🍷sᴛʀᴇᴀᴍ ᴇɴᴅᴇᴅ 🍷")
 
 @Client.on_message(command(["skip"]) & other_filters)
 @errors
@@ -50,7 +50,7 @@ async def skip(_, message: Message):
     for x in callsmusic.pytgcalls.active_calls:
         ACTV_CALLS.append(int(x.chat_id))
     if int(chat_id) not in ACTV_CALLS:
-        await message.reply_text("» ɴᴏᴛʜɪɴɢ ɪs ᴘʟᴀʏɪɴɢ ᴡʜᴀᴛ ᴛᴏ sᴋɪᴘ ʙᴀʙʏ🥲")
+        await message.reply_text("🥂ɴᴏᴛʜɪɴɢ ɪs ᴘʟᴀʏɪɴɢ ᴡʜᴀᴛ ᴛᴏ sᴋɪᴘ 🥲"🥂)
     else:
         queues.task_done(chat_id)
         
@@ -65,4 +65,4 @@ async def skip(_, message: Message):
                     ),
                 ),
             )
-    await message.reply_text("» ᴛʀᴀᴄᴋ sᴋɪᴘᴘᴇᴅ ʙᴀʙʏ🤔")
+    await message.reply_text("🥂 ᴛʀᴀᴄᴋ sᴋɪᴘᴘᴇᴅ 🤔")
