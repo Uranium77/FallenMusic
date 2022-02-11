@@ -80,4 +80,4 @@ python3 main.py # Run the bot
 - [Fallen Music Bot](https://telegram.me/fallen_music_bot) Test Music Bot
 
 ### Support & Updates 🎑
-<a href="https://telegram.me/DevilsHeavenMF"><img src="https://img.shields.io/badge/Join-Group%20Support-blue.svg?style=for-the-badge&logo=Telegram"></a> <a href="https://telegram.me/DevilsHeavenMF"><img src="https://img.shields.io/badge/Join-Updates%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://t.me/LOVERS_SWEETLAND"><img src="https://img.shields.io/badge/Join-Group%20Support-blue.svg?style=for-the-badge&logo=Telegram"></a> <a href="https://t.me/LOVERS_SWEETLAND"><img src="https://img.shields.io/badge/Join-Updates%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
