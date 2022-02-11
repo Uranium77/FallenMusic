@@ -98,7 +98,7 @@ async def play(_, message: Message):
     global que
     global useer
 
-    lel = await message.reply("» ᴘʀᴏᴄᴇssɪɴɢ​... ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ ʙᴀʙʏ🔎")
+    lel = await message.reply("» ᴘʀᴏᴄᴇssɪɴɢ​... ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ 🔎")
 
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
@@ -118,24 +118,24 @@ async def play(_, message: Message):
                     invitelink = await _.export_chat_invite_link(chid)
                 except:
                     await lel.edit(
-                        "<b>» ꜰɪʀsᴛʟʏ ᴍᴀᴋᴇ ᴍᴇ ᴀᴅᴍɪɴ ʙᴀʙʏ</b>")
+                        "<b>» ꜰɪʀsᴛʟʏ ᴍᴀᴋᴇ ᴍᴇ ᴀᴅᴍɪɴ </b>")
                     return
 
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "» ʜᴇʏ ʙᴀʙʏ, ɪ'ᴍ ʜᴇʀᴇ, ᴛʜᴀɴᴋs ꜰᴏʀ ɪɴᴠɪᴛɪɴɢ ᴍᴇ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ ʙᴀʙʏ")
+                        message.chat.id, "» ʜᴇʏ, ɪ'ᴍ ʜᴇʀᴇ, ᴛʜᴀɴᴋs ꜰᴏʀ ɪɴᴠɪᴛɪɴɢ ᴍᴇ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ ")
 
                 except UserAlreadyParticipant:
                     pass
                 except Exception:
                     await lel.edit(
-                        f"<b>» ᴀssɪsᴛᴀɴᴛ ɪs ɴᴏᴛ ɪɴ ᴛʜɪs ᴄʜᴀᴛ ʙᴀʙʏ, sᴇɴᴅ /play ғɪʀsᴛ ᴛɪᴍᴇ ᴛᴏ ᴏʀᴅᴇʀ ᴛʜᴇ ᴀssɪsᴛᴀɴᴛ ᴛᴏ ᴊ​ᴏɪɴ ʏᴏᴜʀ ᴄʜᴀᴛ.")
+                        f"<b>» ᴀssɪsᴛᴀɴᴛ ɪs ɴᴏᴛ ɪɴ ᴛʜɪs ᴄʜᴀᴛ , sᴇɴᴅ /play ғɪʀsᴛ ᴛɪᴍᴇ ᴛᴏ ᴏʀᴅᴇʀ ᴛʜᴇ ᴀssɪsᴛᴀɴᴛ ᴛᴏ ᴊ​ᴏɪɴ ʏᴏᴜʀ ᴄʜᴀᴛ.")
     try:
         await USER.get_chat(chid)
     except:
         await lel.edit(
-            f"<i>» ᴜsᴇʀʙᴏᴛ ɢᴏᴛ ꜰʟᴏᴏᴅᴡᴀɪᴛ ʙᴀʙʏ, ɢᴏɪɴɢ ᴛᴏ sʟᴇᴇᴘ ꜰᴏʀ sᴇᴄᴏɴᴅs, ᴍᴀᴋᴇ sᴜʀᴇ ᴜsᴇʀʙᴏᴛ ɪs ɴᴏᴛ ʙᴀɴɴᴇᴅ ɪɴ ᴛʜɪs ᴄʜᴀᴛ ʙᴀʙʏ.</i>")
+            f"<i>» ᴜsᴇʀʙᴏᴛ ɢᴏᴛ ꜰʟᴏᴏᴅᴡᴀɪᴛ, ɢᴏɪɴɢ ᴛᴏ sʟᴇᴇᴘ ꜰᴏʀ sᴇᴄᴏɴᴅs, ᴍᴀᴋᴇ sᴜʀᴇ ᴜsᴇʀʙᴏᴛ ɪs ɴᴏᴛ ʙᴀɴɴᴇᴅ ɪɴ ᴛʜɪs ᴄʜᴀᴛ ʙᴀʙʏ.</i>")
         return
     
     audio = (
@@ -148,7 +148,7 @@ async def play(_, message: Message):
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
             raise DurationLimitError(
-                f"» sᴏʀʀʏ ʙᴀʙʏ, ᴛʀᴀᴄᴋ ʟᴏɴɢᴇʀ ᴛʜᴀɴ  {DURATION_LIMIT} ᴍɪɴᴜᴛᴇs ᴀʀᴇ ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ ᴛᴏ ᴘʟᴀʏ"
+                f"» sᴏʀʀʏ , ᴛʀᴀᴄᴋ ʟᴏɴɢᴇʀ ᴛʜᴀɴ  {DURATION_LIMIT} ᴍɪɴᴜᴛᴇs ᴀʀᴇ ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ ᴛᴏ ᴘʟᴀʏ"
             )
 
         file_name = get_file_name(audio)
@@ -162,8 +162,8 @@ async def play(_, message: Message):
              [
                 [
                         InlineKeyboardButton(
-                            text="💕 sᴜᴘᴘᴏʀᴛ 💕",
-                            url=f"https://t.me/DevilsHeavenMF")
+                            text="🍷 sᴜᴘᴘᴏʀᴛ 🍷",
+                            url=f"https://t.me/LOVERS_SWEETLAND")
                    
                 ]
             ]
@@ -202,7 +202,7 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(
                             text="💕 sᴜᴘᴘᴏʀᴛ 💕",
-                            url=f"https://t.me/DevilsHeavenMF")
+                            url=f"https://t.me/LOVERS_SWEETLAND")
                    
                 ]
             ]
@@ -217,8 +217,8 @@ async def play(_, message: Message):
             [
                 [
                         InlineKeyboardButton(
-                            text="💕 sᴜᴘᴘᴏʀᴛ 💕",
-                            url=f"https://t.me/DevilsHeavenMF")
+                            text="🍷sᴜᴘᴘᴏʀᴛ🍷 ",
+                            url=f"https://t.me/LOVERS_SWEETLAND")
                    
                 ]
             ]
@@ -226,7 +226,7 @@ async def play(_, message: Message):
 
         if (dur / 60) > DURATION_LIMIT:
             await lel.edit(
-                f"» sᴏʀʀʏ ʙᴀʙʏ, ᴛʀᴀᴄᴋ ʟᴏɴɢᴇʀ ᴛʜᴀɴ  {DURATION_LIMIT} ᴍɪɴᴜᴛᴇs ᴀʀᴇ ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ ᴛᴏ ᴘʟᴀʏ"
+                f"» sᴏʀʀʏ , ᴛʀᴀᴄᴋ ʟᴏɴɢᴇʀ ᴛʜᴀɴ  {DURATION_LIMIT} ᴍɪɴᴜᴛᴇs ᴀʀᴇ ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ ᴛᴏ ᴘʟᴀʏ"
             )
             return
         requested_by = message.from_user.first_name
@@ -235,9 +235,9 @@ async def play(_, message: Message):
     else:
         if len(message.command) < 2:
             return await lel.edit(
-                "» ɢɪᴠᴇ sᴏᴍᴇ ᴛᴇxᴛ ᴛᴏ sᴇᴀʀᴄʜ ʙᴀʙʏ🤦🏻‍♂️"
+                "» ɢɪᴠᴇ sᴏᴍᴇ ᴛᴇxᴛ ᴛᴏ sᴇᴀʀᴄʜ 🤦🏻‍♂️"
             )
-        await lel.edit("🔎")
+        await lel.edit("🍷 𝚄𝚁𝙰𝙽𝙸𝚄𝙼 🍷 𝚖𝚞𝚜𝚒𝚌 𝚜𝚎𝚊𝚛𝚌𝚑 𝚢𝚘𝚞𝚛 𝚜𝚘𝚗𝚐")
         query = message.text.split(None, 1)[1]
         # print(query)
         try:
@@ -262,7 +262,7 @@ async def play(_, message: Message):
 
         except Exception as e:
             await lel.edit(
-                "» ɴᴏᴛ ғᴏᴜɴᴅ, ᴛʀʏ sᴇᴀʀᴄʜɪɴɢ ᴡɪᴛʜ ᴛʜᴇ sᴏɴɢ ɴᴀᴍᴇ ʙᴀʙʏ"
+                "» ɴᴏᴛ ғᴏᴜɴᴅ, ᴛʀʏ sᴇᴀʀᴄʜɪɴɢ ᴡɪᴛʜ ᴛʜᴇ sᴏɴɢ ɴᴀᴍᴇ "
             )
             print(str(e))
             return
@@ -271,8 +271,8 @@ async def play(_, message: Message):
             [
                 [
                         InlineKeyboardButton(
-                            text="💕 sᴜᴘᴘᴏʀᴛ 💕",
-                            url=f"https://t.me/DevilsHeavenMF")
+                            text="🍷 sᴜᴘᴘᴏʀᴛ 🍷",
+                            url=f"https://t.me/LOVERS_SWEETLAND")
                    
                 ]
             ]
@@ -294,7 +294,7 @@ async def play(_, message: Message):
         position = await queues.put(chat_id, file=file_path)
         await message.reply_photo(
             photo="final.png",
-            caption="» ᴛʀᴀᴄᴋ ǫᴜᴇᴜᴇᴅ ᴀᴛ {} ʙᴀʙʏ".format(position),
+            caption="» ᴛʀᴀᴄᴋ ǫᴜᴇᴜᴇᴅ ᴀᴛ {} buddy".format(position),
             reply_markup=keyboard,
         )
     else:
