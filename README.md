@@ -1,7 +1,7 @@
 <p align="center">
     <br><b> 🍷𝗨𝗥𝗔𝗡𝗜𝗨𝗠 𝗠𝗨𝗦𝗜𝗖🍷 </b><br>
 </p>
-<p align="center"><a href="https://t.me/DevilsHeavenMF"><img src="https://telegra.ph/file/93b08120e36d096cd21ca.jpg"></a></p>
+<p align="center"><a href="https://t.me/DevilsHeavenMF"><img src="https://telegra.ph/file/89f092218ebd5c05bd367.jpg"></a></p>
 <p align="center">
     <br><b>Fallen Music is a Telegram Bot project that allows you to play music on Telegram through Telegram Voice Chat Feature</b><br>
 </p>
